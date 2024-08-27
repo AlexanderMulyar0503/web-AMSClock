@@ -22,7 +22,7 @@
     </head>
 
     <body>
-        <div class="clock">
+        <div class="clock border">
             <div class="time">
                 <span id="hours"><?php print($data["hours"]); ?></span>
                 <span class="blink-colon">:</span>
@@ -34,6 +34,13 @@
             <div class="date">
                 <span id="date"><?php print($data["date"]); ?></span>
                 <span id="day"><?php print($data["day"]); ?></span>
+            </div>
+        </div>
+
+        <div class="events border" hidden>
+            <div class="event">
+                <div class="title"></div>
+                <div class="text"></div>
             </div>
         </div>
 
