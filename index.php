@@ -1,10 +1,5 @@
 <?php
-    if (!file_exists("conf.php"))
-    {
-        print("Не создан файл конфигурации (conf.php)");
-        exit();
-    }
-
+    require_once "start.php";
     include "conf.php";
     include "server.php";
 

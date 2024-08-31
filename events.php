@@ -1,10 +1,5 @@
 <?php
-    if (!file_exists("conf.php"))
-    {
-        print("Не создан файл конфигурации (conf.php)");
-        exit();
-    }
-
+    require_once "start.php";
     include "conf.php";
 
     session_start();
@@ -93,6 +88,7 @@
                 print("        <input type='text' name='action' value='add' hidden>");
                 print("        <p>Дата:</p>");
                 print("        <p>* - все дни</p>");
+                print("        <p>ДД.ММ - ежегодное событие</p>");
                 print("        <p>ДД.ММ.ГГГГ - дата</p>");
                 print("        <input type='text' name='addDate' value=''>");
                 print("        <p>Заголовок:</p>");
@@ -107,7 +103,7 @@
                 print("<div class='events border'>");
 
                 $db = new SQLite3($CONF["db_file"]);
-                $sql = "SELECT * FROM events";
+                $sql = "SELECT * FROM events ORDER BY date_evnt";
                 $result = $db->query($sql);
 
                 if ($result->fetchArray(SQLITE3_ASSOC) != false)

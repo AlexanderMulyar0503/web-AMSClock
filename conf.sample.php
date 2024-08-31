@@ -1,7 +1,7 @@
 <?php
-    $CONF["company"] = "AMClock";
+    $CONF["company"] = "AMSClock";
 
     $CONF["password"] = "password";
-    $CONF["db_file"] = "amclockdb.db";
+    $CONF["db_file"] = "amsclockdb.db";
 
     $CONF["timezone"] = "UTC";
