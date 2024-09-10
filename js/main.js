@@ -1,6 +1,5 @@
 const hoursBox = document.getElementById("hours");
 const minutesBox = document.getElementById("minutes");
-const secondsBox = document.getElementById("seconds");
 
 const dateBox = document.getElementById("date");
 const dayBox = document.getElementById("day");
@@ -19,14 +18,13 @@ setInterval(() => {
 
             hoursBox.textContent = jsObj.hours.toString();
             minutesBox.textContent = jsObj.minutes.toString();
-            secondsBox.textContent = jsObj.seconds.toString();
             
             date.textContent = jsObj.date.toString();
             dayBox.textContent = jsObj.day.toString();
         }
     };
     xhr.send();                
-}, 1000);
+}, 10000);
 
 function getEvents()
 {

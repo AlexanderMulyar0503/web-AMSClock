@@ -22,8 +22,6 @@
                 <span id="hours"><?php print($data["hours"]); ?></span>
                 <span class="blink-colon">:</span>
                 <span id="minutes"><?php print($data["minutes"]); ?></span>
-                <span class="blink-colon">:</span>
-                <span id="seconds"><?php print($data["seconds"]); ?></span>
             </div>
 
             <div class="date">

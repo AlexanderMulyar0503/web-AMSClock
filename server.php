@@ -9,7 +9,6 @@
 
         $data = array("hours" => $currentTime->format("H"),
             "minutes" => $currentTime->format("i"),
-            "seconds" => $currentTime->format("s"),
             "date" => $currentTime->format("d.m.Y"),
             "day" => $currentTime->format("D"));
 
